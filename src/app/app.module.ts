@@ -9,7 +9,11 @@ import { CompraComponent } from './compra/compra.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 
 import{ FormsModule, ReactiveFormsModule } from '@angular/forms';
-import{ HttpClientModule } from '@angular/common/http'
+import{ HttpClientModule } from '@angular/common/http';
+import{ ButtonModule } from 'primeng/button';
+import { LayoutComponent } from './layout/layout.component';
+import { MainComponent } from './layout/main/main.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,18 @@ import{ HttpClientModule } from '@angular/common/http'
     HomeComponent,
     VentaComponent,
     CompraComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    LayoutComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
