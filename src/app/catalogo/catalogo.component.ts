@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class CatalogoComponent implements OnInit {
 
   showAddDialog: boolean = false;
+  isLoading: boolean = true;
+
+
+
+  name: string = '';
 
   constructor() { }
 
@@ -16,5 +21,11 @@ export class CatalogoComponent implements OnInit {
 
 addDialog(){
   this.showAddDialog = true;
+  this.name = "";
+}
+
+saveProductBtn(){
+  this.isLoading = true;
+  this.showAddDialog = false;
 }
 }

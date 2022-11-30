@@ -1,0 +1,72 @@
+<head>
+    <meta charset="utf-8">
+    <title>Happy Panda</title>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="agregar-producto.component.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/4db3f232fb.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/home" routerLinkActive="active">Home<span class="visually-hidden">(current)</span></a>
+        <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/venta" routerLinkActive="active">Ventas</a>
+        <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/compra" routerLinkActive="active">Compras</a>
+        <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/catalogo" routerLinkActive="active">Catalogo</a>
+        <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/producto" routerLinkActive="active">Productos</a>
+    </div>
+</nav>
+
+<div class="container-xl">
+    <div class="page-header">
+      <div class="row align-items-center">
+        <div class="col">
+          <h2 class="page-title">
+            Agregar Producto
+          </h2>
+        </div>
+      </div>
+    </div>
+</div>
+
+<br>
+
+<div class="mx-auto" style="width: 70%">
+    <div class="card">
+        <div class="card-header">
+           Ingrese los datos correspondientes
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="mb-3">
+                <label for="" class="form-label">ID</label>
+                <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese ID del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Nombre</label>
+                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el nombre del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Precio Unitario</label>
+                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el precio del producto">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Stock</label>
+                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el stock correspondiente">
+                </div>
+            </form>
+            <div class="footer">
+                <footer>
+                    <button class="btn btn-primary">Guardar</button>
+                </footer>
+            </div>
+
+            
+        </div>
+        
+    </div>
+</div>

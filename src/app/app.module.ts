@@ -14,6 +14,8 @@ import{ ButtonModule } from 'primeng/button';
 import { LayoutComponent } from './layout/layout.component';
 import { MainComponent } from './layout/main/main.component';
 import { RouterModule } from '@angular/router';
+import { DialogModule } from 'primeng/dialog';
+import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { RouterModule } from '@angular/router';
     CompraComponent,
     CatalogoComponent,
     LayoutComponent,
-    MainComponent
+    MainComponent,
+    AgregarProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     HttpClientModule,
     ButtonModule,
-    RouterModule
+    RouterModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
