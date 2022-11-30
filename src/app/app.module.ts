@@ -8,6 +8,9 @@ import { VentaComponent } from './venta/venta.component';
 import { CompraComponent } from './compra/compra.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 
+import{ FormsModule, ReactiveFormsModule } from '@angular/forms';
+import{ HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

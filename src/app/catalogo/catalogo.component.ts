@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogoComponent implements OnInit {
 
+  showAddDialog: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+addDialog(){
+  this.showAddDialog = true;
+}
 }
