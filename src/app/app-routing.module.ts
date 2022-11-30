@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgregarProductoComponent } from './agregar-producto/agregar-producto.component';
-import { CatalogoComponent } from './catalogo/catalogo.component';
-import { CompraComponent } from './compra/compra.component';
-import { HomeComponent } from './home/home.component';
-import { VentaComponent } from './venta/venta.component';
+import { AgregarProductoComponent } from './componentes/agregar-producto/agregar-producto.component';
+import { CatalogoComponent } from './componentes/catalogo/catalogo.component';
+import { CompraComponent } from './componentes/compra/compra.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { VentaComponent } from './componentes/venta/venta.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
