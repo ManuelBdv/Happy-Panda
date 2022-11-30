@@ -38,33 +38,35 @@
            Ingrese los datos correspondientes
         </div>
         <div class="card-body">
-            <form>
+            <form  [formGroup]="formGroup" (ngSubmit)="enviarDatos()">
                 <div class="mb-3">
                 <label for="" class="form-label">ID</label>
-                <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese ID del producto">
+                <input type="text"class="form-control" name="" id="" formControlName="id" aria-describedby="helpId" placeholder="Ingrese ID del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Nombre</label>
-                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el nombre del producto">
+                    <input type="text"class="form-control" name="" id="" formControlName="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Precio Unitario</label>
-                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el precio del producto">
+                    <input type="text"class="form-control" name="" id="" formControlName="precioUni" aria-describedby="helpId" placeholder="Ingrese el precio del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Stock</label>
-                    <input type="text"class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingrese el stock correspondiente">
+                    <input type="text"class="form-control" name="" id="" formControlName="stock" aria-describedby="helpId" placeholder="Ingrese el stock correspondiente">
                 </div>
-            </form>
-            <div class="footer">
-                <footer>
-                    <button class="btn btn-primary">Guardar</button>
-                </footer>
-            </div>
 
+                <div class="btn-group" role="group" aria-label="">
+                
+                    <button type="submit" class="btn btn-success">Guardar</button>
+    
+                    <button type="button" class="btn btn-primary">Cancelar</button>
+                </div>
+
+            </form>
             
         </div>
         

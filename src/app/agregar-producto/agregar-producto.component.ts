@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-agregar-producto',
   templateUrl: './agregar-producto.component.html',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarProductoComponent implements OnInit {
 
-  constructor() { }
+  formGroup:FormGroup;
+
+  constructor(
+    public formulario:FormBuilder,
+  ) {
+    this.formGroup = this.formulario.group({
+      id:[''],
+      nombre:[''],
+      precioUni:[''],
+      stock:['']
+    });
+   }
 
   ngOnInit(): void {
+  }
+
+  enviarDatos(){
+    console.log("Presionado");
+    console.log(this.formGroup.value);
   }
 
   saveProductBtn(){
