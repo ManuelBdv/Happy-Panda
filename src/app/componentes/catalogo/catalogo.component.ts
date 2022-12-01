@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'src/app/servicio/crud.service';
 
 @Component({
   selector: 'app-catalogo',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent implements OnInit {
-
+  Productos:any;
   showAddDialog: boolean = false;
   isLoading: boolean = true;
 
@@ -14,9 +15,15 @@ export class CatalogoComponent implements OnInit {
 
   name: string = '';
 
-  constructor() { }
+  constructor(
+    private crudService:CrudService
+  ) { }
 
   ngOnInit(): void {
+    this.crudService.obtenerProductos().subscribe(respuesta=>{
+      console.log(respuesta);
+      this.Productos=respuesta;
+    });
   }
 
 addDialog(){

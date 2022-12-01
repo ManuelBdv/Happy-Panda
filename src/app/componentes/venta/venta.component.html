@@ -35,51 +35,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row" class="cursor-pointer">10</td>
-                            <td scope="row" class="cursor-pointer">Lapiz</td>
-                            <td scope="row" class="cursor-pointer">$5</td>
-                            <td scope="row" class="cursor-pointer">200</td>
-                            <td scope="row">
-                                <input type="text" placeholder="Cantidad">
-                                <button class="btn btn-light ms-2">Vender</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="cursor-pointer">10</td>
-                            <td scope="row" class="cursor-pointer">Lapiz</td>
-                            <td scope="row" class="cursor-pointer">$5</td>
-                            <td scope="row" class="cursor-pointer">200</td>
-                            <td scope="row">
-                                <input type="text" placeholder="Cantidad">
-                                <button class="btn btn-light ms-2">Vender</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="cursor-pointer">10</td>
-                            <td scope="row" class="cursor-pointer">Lapiz</td>
-                            <td scope="row" class="cursor-pointer">$5</td>
-                            <td scope="row" class="cursor-pointer">200</td>
-                            <td scope="row">
-                                <input type="text" placeholder="Cantidad">
-                                <button class="btn btn-light ms-2">Vender</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="cursor-pointer">10</td>
-                            <td scope="row" class="cursor-pointer">Lapiz</td>
-                            <td scope="row" class="cursor-pointer">$5</td>
-                            <td scope="row" class="cursor-pointer">200</td>
-                            <td scope="row">
-                                <input type="text" placeholder="Cantidad">
-                                <button class="btn btn-light ms-2">Vender</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row" class="cursor-pointer">10</td>
-                            <td scope="row" class="cursor-pointer">Lapiz</td>
-                            <td scope="row" class="cursor-pointer">$5</td>
-                            <td scope="row" class="cursor-pointer">200</td>
+                        <tr *ngFor="let producto of Productos; let iControl=index">
+                            <td scope="row">{{producto.idproductos}}</td>
+                            <td>{{producto.nombre}}</td>
+                            <td>{{producto.unit}}</td>
+                            <td>{{producto.precio}}</td>
                             <td scope="row">
                                 <input type="text" placeholder="Cantidad">
                                 <button class="btn btn-light ms-2">Vender</button>

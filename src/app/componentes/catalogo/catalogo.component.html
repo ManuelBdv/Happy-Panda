@@ -43,59 +43,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Lapiz</td>
-                            <td>$5</td>
-                            <td>10</td>
+                        <tr *ngFor="let producto of Productos; let iControl=index">
+                            <td scope="row">{{producto.idproductos}}</td>
+                            <td>{{producto.nombre}}</td>
+                            <td>{{producto.unit}}</td>
+                            <td>{{producto.precio}}</td>
                         </tr>
                     </tbody>
                 </table>

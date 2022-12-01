@@ -1,6 +1,6 @@
 export class producto{
-    id:String,
-    nombre:String,
-    precioUni:number,
-    stock:number
+    idproductos!:String;
+    nombre!:String;
+    unit!:number;
+    precio!:number
 }
