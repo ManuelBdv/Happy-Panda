@@ -9,46 +9,72 @@
         <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
     </head>
 
-    <body>
-        <header>
-            <a href="#" class="logo">Ventas</a>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#" routerLink="/venta" routerLinkActive="active">Ventas</a></li>
-                <li><a href="#" routerLink="/compra" routerLinkActive="active">Compras</a></li>
-                <li><a href="#" routerLink="/catalogo" routerLinkActive="active">Catalogo</a></li>
-                <li><a href="#" routerLink="/producto" routerLinkActive="active">Productos</a></li>
-            </ul>
-        </header> 
-        <section>
-            <img src="../../assets/img/stars.png" id="stars">
-        </section>
-            <div class="table-responsive">
-                <table class="table card-table">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let producto of Productos; let iControl=index">
-                            <td scope="row">{{producto.idproductos}}</td>
-                            <td>{{producto.nombre}}</td>
-                            <td>{{producto.unit}}</td>
-                            <td>{{producto.precio}}</td>
-                            <td scope="row">
-                                <input type="text" placeholder="Cantidad">
-                                <button class="btn btn-light ms-2">Comprar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/home" routerLinkActive="active">Home<span class="visually-hidden">(current)</span></a>
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/venta" routerLinkActive="active">Ventas</a>
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/compra" routerLinkActive="active">Compras</a>
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/catalogo" routerLinkActive="active">Catalogo</a>
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/producto" routerLinkActive="active">Productos</a>
+        </div>
+    </nav>
+    
+    <div class="container-xl">
+        <div class="page-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h2 class="page-title">
+                Compras
+              </h2>
             </div>
-    </body>
+          </div>
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="mx-auto" style="width: 70%">
+        <div class="card">
+            <div>
+                <div class="mx-0 d-inline-block">
+                </div>
+            </div>
+            <div class="card-header d-flex justify-content-between">
+                Productos Disponibles
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table card-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Stock</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let producto of Productos; let iControl=index">
+                                <td scope="row">{{producto.idproductos}}</td>
+                                <td>{{producto.nombre}}</td>
+                                <td>{{producto.unit}}</td>
+                                <td>{{producto.precio}}</td>
+                                <td scope="row">
+                                    <input type="text" placeholder="Cantidad">
+                                    <button class="btn btn-primary ms-2">Comprar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+        
+   
 
     <footer class="pie-pagina" style="position: fixed; bottom: 0; width: 100%;">
         <div class="grupo-2">
