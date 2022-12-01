@@ -4,11 +4,11 @@ import { CrudService } from 'src/app/servicio/crud.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-agregar-producto',
-  templateUrl: './agregar-producto.component.html',
-  styleUrls: ['./agregar-producto.component.css']
+  selector: 'app-editar-producto',
+  templateUrl: './editar-producto.component.html',
+  styleUrls: ['./editar-producto.component.css']
 })
-export class AgregarProductoComponent implements OnInit {
+export class EditarProductoComponent implements OnInit {
 
   formGroup:FormGroup;
 
@@ -16,17 +16,16 @@ export class AgregarProductoComponent implements OnInit {
     public formulario:FormBuilder,
     private crudService:CrudService,
     private ruteador:Router
-  ) {
+  ) { 
     this.formGroup = this.formulario.group({
       idproductos:[''],
       nombre:[''],
       unit:[''],
       precio:['']
     });
-   }
+  }
 
   ngOnInit(): void {
-    
   }
 
   enviarDatos(){

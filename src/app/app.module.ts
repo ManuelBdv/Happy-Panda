@@ -14,6 +14,7 @@ import{ ButtonModule } from 'primeng/button';
 import { RouterModule } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
 import { AgregarProductoComponent } from './componentes/agregar-producto/agregar-producto.component';
+import { EditarProductoComponent } from './componentes/editar-producto/editar-producto.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AgregarProductoComponent } from './componentes/agregar-producto/agregar
     VentaComponent,
     CompraComponent,
     CatalogoComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    EditarProductoComponent
   ],
   imports: [
     BrowserModule,

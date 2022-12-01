@@ -13,7 +13,12 @@ export class CrudService {
   agregarProducto(datosProducto:producto):Observable<any> {
     return this.clienteHttp.post(this.API+"?insertar=1",datosProducto);
   }
+
   obtenerProductos(){
     return this.clienteHttp.get(this.API);
+  }
+
+  borrarProducto(id:any):Observable<any> {
+    return this.clienteHttp.get(this.API+"?borrar="+id);
   }
 }
