@@ -38,30 +38,32 @@
            Ingrese los datos correspondientes
         </div>
         <div class="card-body">
-            <form  [formGroup]="formGroup" (ngSubmit)="enviarDatos()">
+            <form ngNativeValidate [formGroup]="formGroup" (ngSubmit)="enviarDatos()">
                 <div class="mb-3">
                 <label for="" class="form-label">ID</label>
-                <input type="text"class="form-control" name="" id="" formControlName="idproductos" aria-describedby="helpId" placeholder="Ingrese ID del producto">
+                <input required type="text"class="form-control" name="" id="" formControlName="idproductos" aria-describedby="helpId" placeholder="Ingrese ID del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Nombre</label>
-                    <input type="text"class="form-control" name="" id="" formControlName="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del producto">
+                    <input required type="text"class="form-control" name="" id="" formControlName="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Precio Unitario</label>
-                    <input type="text"class="form-control" name="" id="" formControlName="unit" aria-describedby="helpId" placeholder="Ingrese el precio del producto">
+                    <input required type="text"class="form-control" name="" id="" formControlName="unit" aria-describedby="helpId" placeholder="Ingrese el precio del producto">
                 </div>
 
                 <div class="mb-3">
                     <label for="" class="form-label">Stock</label>
-                    <input type="text"class="form-control" name="" id="" formControlName="precio" aria-describedby="helpId" placeholder="Ingrese el stock correspondiente">
+                    <input required type="text"class="form-control" name="" id="" formControlName="precio" aria-describedby="helpId" placeholder="Ingrese el stock correspondiente">
                 </div>
 
                 <div class="btn-group" role="group" aria-label="">
                 
                     <button type="submit" class="btn btn-success">Guardar</button>
+
+                    <button type="button" routerLink="/catalogo" routerLinkActive="active" class="btn btn-primary">Cancelar</button>
                 </div>
 
             </form>
@@ -70,3 +72,9 @@
         
     </div>
 </div>
+
+<footer class="pie-pagina" style="position: fixed; bottom: 0; width: 100%;">
+    <div class="grupo-2">
+        <small>&copy; 2022 <b>Happy Panda</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
