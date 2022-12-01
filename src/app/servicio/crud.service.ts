@@ -21,4 +21,12 @@ export class CrudService {
   borrarProducto(id:any):Observable<any> {
     return this.clienteHttp.get(this.API+"?borrar="+id);
   }
+
+  obtenerProducto(id:any):Observable<any> {
+    return this.clienteHttp.get(this.API+"?consultar="+id);
+  }
+
+  editarProducto(id:any,datosProducto:any):Observable<any> {
+    return this.clienteHttp.post(this.API+"?actualizar="+id,datosProducto);
+  }
 }
