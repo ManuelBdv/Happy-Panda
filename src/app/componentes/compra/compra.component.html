@@ -15,10 +15,10 @@
             <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/venta" routerLinkActive="active">Ventas</a>
             <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/compra" routerLinkActive="active">Compras</a>
             <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/catalogo" routerLinkActive="active">Catalogo</a>
-            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/producto" routerLinkActive="active">Productos</a>
+            <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/sucursales" routerLinkActive="active">Sucursales</a>
         </div>
     </nav>
-    
+    <br>
     <div class="container-xl">
         <div class="page-header">
           <div class="row align-items-center">
@@ -61,8 +61,10 @@
                                 <td>{{producto.unit}}</td>
                                 <td>{{producto.precio}}</td>
                                 <td scope="row">
-                                    <input type="text" placeholder="Cantidad">
-                                    <button class="btn btn-primary ms-2">Comprar</button>
+                                    <form [formGroup]="formGroup" (ngSubmit)="enviarDatos()">
+                                        <input type="text" placeholder="Cantidad" class="form control" formControlName="unit">
+                                        <button class="btn btn-primary ms-2">Comprar</button>
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>

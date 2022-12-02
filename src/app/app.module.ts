@@ -7,6 +7,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { VentaComponent } from './componentes/venta/venta.component';
 import { CompraComponent } from './componentes/compra/compra.component';
 import { CatalogoComponent } from './componentes/catalogo/catalogo.component';
+import { SucursalesComponent } from './componentes/sucursales/sucursales.component';
 
 import{ FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{ HttpClientModule } from '@angular/common/http';
@@ -16,6 +17,7 @@ import { DialogModule } from 'primeng/dialog';
 import { AgregarProductoComponent } from './componentes/agregar-producto/agregar-producto.component';
 import { EditarProductoComponent } from './componentes/editar-producto/editar-producto.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { EditarProductoComponent } from './componentes/editar-producto/editar-pr
     CompraComponent,
     CatalogoComponent,
     AgregarProductoComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    SucursalesComponent
   ],
   imports: [
     BrowserModule,

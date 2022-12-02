@@ -1,7 +1,6 @@
 <div>
     
 </div>
-
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav">
         <a class="nav-item nav-link active" href="#" aria-current="page" routerLink="/home" routerLinkActive="active">Home<span class="visually-hidden">(current)</span></a>
@@ -17,7 +16,7 @@
       <div class="row align-items-center">
         <div class="col">
           <h2 class="page-title">
-            Catalogo
+            Sucursales
           </h2>
         </div>
       </div>
@@ -32,32 +31,36 @@
             <div class="mx-0 d-inline-block">
             </div>
         </div>
-        <div class="card-header d-flex justify-content-between">
-            Productos Disponibles
-            <a class="btn btn-success" routerLink="/producto" routerLinkActive="active"> Agregar nuevo producto</a>
-        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Horario</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Stock</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let producto of Productos; let iControl=index">
-                            <td scope="row">{{producto.idproductos}}</td>
-                            <td>{{producto.nombre}}</td>
-                            <td>{{producto.unit}}</td>
-                            <td>{{producto.precio}}</td>
-                            <td>
-                                <a class="btn btn-info" routerLink="/editar/{{producto.idproductos}}" routerLinkActive="active"> Editar</a> | 
-                                <a class="btn btn-danger" (click)="borrarRegistro(producto.idproductos, iControl)" role="button">Borrar</a>
-                            </td>
+                        <tr>
+                            <td scope="row">1</td>
+                            <td>Tepito 1429</td>
+                            <td>8:00 AM - 5:00PM</td>
+                            <td>TEPITO</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">2</td>
+                            <td>Candelaria 1515</td>
+                            <td>8:00 AM - 5:00PM</td>
+                            <td>CANDELARIA</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">3</td>
+                            <td>Buena Vista 1400</td>
+                            <td>8:00 AM - 7:00PM</td>
+                            <td>BB</td>
                         </tr>
                     </tbody>
                 </table>

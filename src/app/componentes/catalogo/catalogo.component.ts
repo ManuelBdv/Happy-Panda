@@ -10,15 +10,12 @@ import { Router } from '@angular/router';
 })
 export class CatalogoComponent implements OnInit {
   Productos:any;
-  showAddDialog: boolean = false;
-  isLoading: boolean = true;
 
   name: string = '';
 
   constructor(
     private crudService:CrudService,
     public formulario:FormBuilder,
-    private ruteador:Router
   ) { }
 
   ngOnInit(): void {

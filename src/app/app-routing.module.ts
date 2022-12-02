@@ -5,6 +5,7 @@ import { CatalogoComponent } from './componentes/catalogo/catalogo.component';
 import { CompraComponent } from './componentes/compra/compra.component';
 import { EditarProductoComponent } from './componentes/editar-producto/editar-producto.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { SucursalesComponent } from './componentes/sucursales/sucursales.component';
 import { VentaComponent } from './componentes/venta/venta.component';
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: 'catalogo', component: CatalogoComponent},
   {path: 'home', component: HomeComponent},
   {path: 'producto', component: AgregarProductoComponent},
-  {path: 'editar/:id', component: EditarProductoComponent}
+  {path: 'editar/:id', component: EditarProductoComponent},
+  {path: 'sucursales', component: SucursalesComponent}
+
 ];
 
 @NgModule({
