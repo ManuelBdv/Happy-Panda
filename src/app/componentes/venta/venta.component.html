@@ -49,8 +49,8 @@
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Precio</th>
                                 <th scope="col">Stock</th>
+                                <th scope="col">Precio</th>
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -59,10 +59,12 @@
                                 <td scope="row">{{producto.idproductos}}</td>
                                 <td>{{producto.nombre}}</td>
                                 <td>{{producto.unit}}</td>
-                                <td>{{producto.precio}}</td>
+                                <td>${{producto.precio}}</td>
                                 <td scope="row">
-                                    <input type="text" placeholder="Cantidad">
-                                    <button class="btn btn-primary ms-2">Vender</button>
+                                    <form [formGroup]="formGroup" (ngSubmit)="enviarDatos(producto.idproductos)">
+                                        <input type="text" placeholder="Cantidad" class="form control" formControlName="unit">
+                                        <button class="btn btn-primary ms-2">Venta</button>
+                                    </form>
                                 </td>
                             </tr>
                         </tbody>

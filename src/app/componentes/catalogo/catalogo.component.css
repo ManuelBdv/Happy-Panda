@@ -3,7 +3,11 @@ body{
 }
 
 
-
+.btn-info {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #057e97;
+    --bs-btn-border-color: 057e97;
+}
 .pie-pagina{
     width: 100%;
     background-color: #0a141d;

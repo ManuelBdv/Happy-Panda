@@ -43,8 +43,8 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
                             <th scope="col">Stock</th>
+                            <th scope="col">Precio</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -53,9 +53,9 @@
                             <td scope="row">{{producto.idproductos}}</td>
                             <td>{{producto.nombre}}</td>
                             <td>{{producto.unit}}</td>
-                            <td>{{producto.precio}}</td>
+                            <td>${{producto.precio}}</td>
                             <td>
-                                <a class="btn btn-info" routerLink="/editar/{{producto.idproductos}}" routerLinkActive="active"> Editar</a> | 
+                                <a class="btn btn-info" style="font: white;" routerLink="/editar/{{producto.idproductos}}" routerLinkActive="active"> Editar</a> | 
                                 <a class="btn btn-danger" (click)="borrarRegistro(producto.idproductos, iControl)" role="button">Borrar</a>
                             </td>
                         </tr>

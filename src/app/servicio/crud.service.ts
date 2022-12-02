@@ -36,4 +36,5 @@ export class CrudService {
   comprarProducto(id:any,datosProducto:any):Observable<any> {
     return this.clienteHttp.post(this.API+"?comprar="+id,datosProducto);
   }
+  
 }

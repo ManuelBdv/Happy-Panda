@@ -9,16 +9,14 @@ import { CrudService } from 'src/app/servicio/crud.service';
   styleUrls: ['./compra.component.css']
 })
 export class CompraComponent implements OnInit {
-  elID:any;
   formGroup:FormGroup;
   Productos:any;
+  unidad:any;
   constructor(
     private activeRoute:ActivatedRoute,
     private crudService:CrudService,
     public formulario:FormBuilder,
   ) { 
-    this.elID=this.activeRoute.snapshot.paramMap.get('id');
-    console.log(this.elID);
 
     this.formGroup=this.formulario.group(
       {
@@ -26,18 +24,39 @@ export class CompraComponent implements OnInit {
       }
     );
   }
+  
 
   ngOnInit(): void {
+    this.actualizarTabla();
+  }
+
+  
+  enviarDatos(id:any):any{
+    let unidadTotal = 0;
+    let formulariogroup = this.formGroup;
+    this.crudService.obtenerProducto(id).subscribe(
+      respuesta=>{
+        unidadTotal = parseInt(this.formGroup.value.unit) + parseInt(respuesta[0]['unit']);
+        formulariogroup.setValue({
+          unit:unidadTotal+""
+        });
+        
+        this.crudService.comprarProducto(id,formulariogroup.value).subscribe(()=>{
+          this.actualizarTabla();
+          this.formGroup=this.formulario.group(
+            {
+              unit:['']
+            }
+          );
+        });
+
+      }
+    );
+  }
+  
+  actualizarTabla():any{
     this.crudService.obtenerProductos().subscribe(respuesta=>{
-      console.log(respuesta);
       this.Productos=respuesta;
     });
   }
-  enviarDatos():any{
-    console.log(this.elID);
-    console.log(this.formGroup.value);
-    this.crudService.comprarProducto(this.elID, this.formGroup.value).subscribe(()=>{
-    });
-  }
-
 }
